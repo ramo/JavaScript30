@@ -21,24 +21,23 @@
     console.log('hello');
 
     // Interpolated
-    console.log('Hello I am a %s string!', '💩');
+    console.log('Hello I am %s', 'Ramo');
 
     // Styled
-    // console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
+    // console.log('%c I am a great text', 'background: red; text-shadow: 10px 10px 0 blue; font-size: 50px');
 
     // warning!
-    console.warn('OH NOOO');
-
+    console.warn("This is a warning.");
+    
     // Error :|
-    console.error('Shit!');
+    console.error("This is a Error!!.");
 
     // Info
-    console.info('Crocodiles eat 3-4 people per year');
+    console.info('This is a information');
 
     // Testing
     const p = document.querySelector('p');
-
-    console.assert(p.classList.contains('ouch'), 'That is wrong!');
+    console.assert(p.classList.contains('test'), 'This is wrong');
 
     // clearing
     console.clear();
@@ -48,8 +47,8 @@
     console.dir(p);
 
     console.clear();
-
     // Grouping together
+
     dogs.forEach(dog => {
       console.groupCollapsed(`${dog.name}`);
       console.log(`This is ${dog.name}`);
@@ -59,31 +58,29 @@
     });
 
     // counting
-
-    console.count('Wes');
-    console.count('Wes');
-    console.count('Steve');
-    console.count('Steve');
-    console.count('Wes');
-    console.count('Steve');
-    console.count('Wes');
-    console.count('Steve');
-    console.count('Steve');
-    console.count('Steve');
-    console.count('Steve');
-    console.count('Steve');
-
+    console.count('Ramo');
+    console.count('Ramo');
+    console.count('Rocks');
+    console.count('Rocks');
+    console.count('Ramo');
+    console.count('Ramo');
+    console.count('Ramo');
+    console.count('Rocks');
+    console.count('Rocks');
+    console.count('Rocks');
+    console.count('Ramo');
+    
     // timing
-    console.time('fetching data');
-    fetch('https://api.github.com/users/wesbos')
-      .then(data => data.json())
+    console.time('Fetching GitHub User data for Ramo');
+    fetch('https://api.github.com/users/ramo')
+      .then(blob => blob.json())
       .then(data => {
-        console.timeEnd('fetching data');
+        console.timeEnd('Fetching GitHub User data for Ramo');
         console.log(data);
       });
-
+    
     console.table(dogs);
-
+    
   </script>
 </body>
 </html>
