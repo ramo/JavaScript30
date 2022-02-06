@@ -47,6 +47,12 @@ video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 video.addEventListener('timeupdate', handleProgress);
 
+window.addEventListener('keyup', (e) => {
+    console.log(e);
+    if (e.key === ' ') {
+        togglePlay();
+    }
+});
 toggle.addEventListener('click', togglePlay);
 fullscreen.addEventListener('click', toggleFullscreen);
 skipButtons.forEach(button => button.addEventListener('click', skip));
